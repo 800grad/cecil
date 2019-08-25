@@ -1,0 +1,70 @@
+.hero {
+    background-color: $panel-bg;
+    pointer-events: none;
+    position: relative;
+    margin-bottom: 0;
+    z-index: 1;
+    border-radius: $small;
+    box-shadow: $base-box-shadow;
+
+    header {
+        position: relative;
+        color: $body-bg;
+        background-color: $brand-primary-dark;
+        background-image: $brand-primary-gradient-ver;
+        margin: -1em -1em 1em;
+        padding: 1em;
+        border-radius: $small;
+        box-shadow: $base-box-shadow;
+
+        svg {
+            vertical-align: sub;
+            width: 1em;
+            height: 1em;
+            fill: $panel-bg;
+            position: relative;
+            bottom: $xsmall;
+        }
+
+        br {
+            display: block;
+            margin-bottom: 0.5em;
+            width: 100%;
+            content: '';
+        }
+
+        span {
+            display: block;
+
+            &:first-child {
+                margin-bottom: $normal;
+            }
+        }
+
+        h1 {
+            font-size: $large;
+            font-weight: $font-weight-h1;
+        }
+
+        mark {
+            font-size: 150%;
+            font-weight: $font-weight-h4;
+            font-style: italic;
+            background-color: $panel-bg;
+            display: inline;
+            padding: $xsmall;
+            margin-left: $xsmall;
+            margin-right: $xsmall;
+            box-shadow: $xsmall 0 0 $panel-bg, -$xsmall 0 0 $panel-bg;
+            margin-bottom: $normal;
+            color: $brand-primary-dark;
+            white-space: pre-wrap;
+            box-decoration-break: clone;
+            opacity: 0.9;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+// Devices
+
+$ExtraSmallWidth: 320px;
+$SmallWidth: 480px;
+$MediumWidth: 768px;
+$LargeWidth: 1024px;
+$ExtraLargeWidth: 1280px;
+$HugeWidth: 1680px;
+
+// :Root-Size
+
+$ExtraSmallRoot: 16px;
+$SmallRoot: 18px;
+$MediumRoot: 20px;
+$LargeRoot: 22px;
+$ExtraLargeRoot: 24px;
+$HugeRoot: 26px;
+
+// Sizing
+$xxsmall: 1px;
+$xsmall: 0.25rem;
+$small: 0.5rem;
+$normal: 1rem;
+$large: 2rem;
+$xlarge: 3rem;
+$xxlarge: 4rem;
+
+// Colors
+$brand-primary: hsl(355, 60%, 40%);
+$brand-primary-light: desaturate(lighten($brand-primary, 20), 10);
+$brand-primary-dark: darken($brand-primary, 10);
+$brand-primary-gradient-hor: linear-gradient(90deg, $brand-primary-dark, $brand-primary);
+$brand-primary-gradient-ver: linear-gradient(0deg, $brand-primary-dark, $brand-primary);
+$brand-secondary: hsl(190, 100%, 20%);
+$brand-secondary-light: desaturate(lighten($brand-primary, 20), 10);
+$brand-secondary-dark: darken($brand-secondary, 10);
+$brand-secondary-gradient-ver: linear-gradient(90deg, $brand-secondary-light, $brand-secondary);
+$brand-secondary-gradient-hor: linear-gradient(0deg, $brand-secondary-light, $brand-secondary);
+$gray-extra-light: hsl(0, 0%, 95%);
+$gray-light: hsl(0, 0%, 85%);
+$gray: hsl(0, 0%, 75%);
+$gray-dark: hsl(0, 0%, 55%);
+$gray-extra-dark: hsl(0, 0%, 15%);
+$highlight-success: hsl(150, 60%, 50%);
+$highlight-error: hsl(0, 80%, 60%);
+$highlight-notice: hsl(55, 100%, 50%);
+$highlight-info: hsl(200, 70%, 60%);
+$body-bg: desaturate(lighten($brand-primary, 55), 60);
+$border-color: $gray-dark;
+$text-color-light: $gray-dark;
+$text-color: $gray-extra-dark;
+$text-color-dark: hsl(0, 0%, 0%);
+$link-color: $brand-primary-light;
+$link-hover-color: $brand-primary;
+
+$panel-bg: hsla(0, 0%, 100%, .6);
+$overlay-bg: transparentize($gray-extra-dark, 0.7);
+
+// Base configuration
+$font-size-base: 14;
+$font-base-weight: 500;
+$font-light-weight: 300;
+$font-bold-weight: 600;
+$font-stack-base: 'Source Sans Pro', sans-serif;
+$font-stack-head: 'Saira', sans-serif;
+$font-stack-mono: 'Fura Code', monospace;
+$border-radius: $xsmall;
+
+// Headings
+$font-size-h1: $xxlarge;
+$font-size-h2: $xlarge;
+$font-size-h3: $xlarge;
+$font-size-h4: $large;
+$font-size-h5: $large;
+$font-size-h6: $normal;
+$font-weight-h1: $font-bold-weight;
+$font-weight-h2: $font-bold-weight;
+$font-weight-h3: $font-base-weight;
+$font-weight-h4: $font-bold-weight;
+$font-weight-h5: $font-base-weight;
+$font-weight-h6: $font-base-weight;
+
+$font-directory: "../../fonts/";
+
+$btn-font-size: $normal;
+$btn-icon-size: $normal;
+
+$btn-default-top-bg: $body-bg;
+$btn-default-bottom-bg: $gray-light;
+$btn-default-hover-bg: $panel-bg;
+$btn-default-text-color: $text-color;
+$btn-default-hover-text-color: $brand-primary;
+$btn-default-border-color: $border-color;
+$btn-default-hover-border-color: $brand-primary;
+
+$btn-primary-top-bg: $brand-primary-light;
+$btn-primary-bottom-bg: $brand-primary;
+$btn-primary-hover-bg: $brand-primary;
+$btn-primary-text-color: $panel-bg;
+$btn-primary-hover-text-color: $btn-primary-text-color;
+
+// Secondary Button
+$btn-secondary-top-bg: $brand-secondary;
+$btn-secondary-bottom-bg: $brand-secondary-dark;
+$btn-secondary-hover-bg: $brand-secondary-dark;
+$btn-secondary-text-color: $panel-bg;
+$btn-secondary-hover-text-color: $btn-secondary-text-color;
+
+// Panels
+$panel-header-bg: $gray-light;
+$panel-header-font-size: 14;
+$panel-header-color: $text-color;
+$panel-border: $border-color;
+
+// Labels
+$label-font-size: 12;
+$label-color: $text-color;
+
+// Form base
+$input-font-size: 16;
+$input-bg: $gray-light;
+$input-color: $brand-secondary;
+$input-placeholder-color: lighten($text-color, 15%);
+$input-border: $border-color;
+
+// Form states
+$input-focus-bg: $panel-bg;
+$input-focus-border: $brand-primary;
+$input-focus-color: $brand-secondary;
+$input-error-bg: desaturate(lighten($highlight-error, 38%), 20%);
+$input-error-border: $highlight-error;
+$input-error-color: $highlight-error;
+$input-success-bg: $panel-bg;
+$input-success-border: $highlight-success;
+$input-success-color: $brand-secondary-dark;
+
+// Tables
+$panel-table-header-bg: $brand-secondary-dark;
+$panel-table-header-color: $panel-bg;
+$table-row-bg: $panel-bg;
+$table-row-color: $brand-secondary;
+$table-row-highlight-bg: darken($table-row-bg, 4%);
+$table-header-bg: $brand-secondary;
+$table-header-color: $panel-bg;
+
+// Badges, Hints
+$badge-discount-bg: $highlight-error;
+$badge-discount-color: $body-bg;
+$badge-newcomer-bg: $highlight-notice;
+$badge-newcomer-color: $body-bg;
+$badge-recommendation-bg: $highlight-success;
+$badge-recommendation-color: $body-bg;
+$badge-download-bg: $highlight-info;
+$badge-download-color: $body-bg;
+
+$base-box-shadow: 0 $xsmall $xsmall -$xsmall $overlay-bg;

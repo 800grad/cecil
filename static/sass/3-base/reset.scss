@@ -1,0 +1,38 @@
+progress[value] {
+    appearance: none;
+    border: 0;
+    outline: $xsmall solid $brand-primary-dark;
+    width: calc(100% - #{$xlarge});
+    height: $normal;
+    background: $brand-primary-dark;
+    position: relative;
+    margin: $normal;
+
+    &::-webkit-progress-bar {
+      background-color: $brand-primary-dark
+    }
+
+    &::-webkit-progress-value {
+      background: $brand-primary-light
+    }
+
+    &::-moz-progress-bar {
+      background-color: $brand-primary-light;
+    }
+
+    &::after {
+      position: absolute;
+      content: attr(data-value);
+      text-align: center;
+      outline: $xsmall solid $overlay-bg;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: $normal;
+      width: $large;
+      line-height: $normal;
+      font-size: small;
+      color: $body-bg;
+      background-color: $overlay-bg;
+    }
+}

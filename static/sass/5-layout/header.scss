@@ -1,0 +1,71 @@
+.header-unpin {
+    transform: translateY(-$xxlarge);
+}
+
+.header-pin {
+    transform: translateY(0);
+}
+
+.mainhead {
+    padding: 0;
+    min-height: $xxlarge;
+    color: $text-color;
+    background-color: $panel-bg;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    will-change: transform;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: $base-box-shadow;
+
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: $small $large;
+
+        @include MediaHuge {
+            padding: $small $normal;
+        }
+    }
+}
+
+.admin-bar {
+    .mainhead {
+        top: 46px;
+
+        @media screen and (min-width: 783px) {
+            top: 32px;
+        }
+    }
+}
+
+.mainhead-logo {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .mainhead-title {
+        transition: color 0.5s ease;
+        color: $brand-primary-dark;
+        font-family: $font-stack-head;
+        font-weight: $font-weight-h1;
+        font-size: $font-size-h6;
+
+        &:hover {
+            color: $brand-primary;
+
+            + .mainhead-slogan {
+                color: $brand-primary-light;
+            }
+        }
+    }
+
+    .mainhead-slogan {
+        transition: color 0.5s ease;
+        color: $brand-primary;
+        font-family: $font-stack-head;
+        font-weight: $font-weight-h6;
+        font-size: 68%;
+    }
+}

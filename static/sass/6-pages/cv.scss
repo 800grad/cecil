@@ -1,0 +1,170 @@
+.cv {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    .cv-item {
+        display: flex;
+        flex-direction:column;
+        position: relative;
+        padding-left: $normal + $small;
+        border-bottom: 1px solid $border-color;
+        padding-top: $normal;
+        padding-bottom: $normal;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+        aside {
+            display: block;
+
+            @include MediaLarge {
+                width: 38.3%;
+                min-width: 6 * $normal;
+            }
+
+            &::after {
+                position: absolute;
+                left: -$xxsmall;
+                top: 0;
+                content: '';
+                display: block;
+                height: 100%;
+                background-color: $border-color;
+                right: 0;
+                width: $xxsmall;
+            }
+
+            .where {
+                .agency {
+                    font-weight: $font-bold-weight;
+                    display: block;
+                }
+
+                .city {
+                    display: block;
+                    font-style: italic;
+                }
+            }
+        }
+
+        > ul {
+            position: relative;
+
+            &::before {
+                display: block;
+                content: '';
+                height: $normal - $xsmall;
+                width: $normal - $xsmall;
+                border: 4px solid white;
+                background-color: $brand-primary;
+                box-shadow: 0 0 0 $xsmall $border-color;
+                border-radius: 100%;
+                position: absolute;
+                left: -1.9rem;
+                top: $small + $xsmall;
+                z-index: 1;
+            }
+        }
+
+        .title {
+            h2 {
+                font-size: $normal + $xsmall;
+            }
+        }
+
+        .what {
+            .whatheadline {
+                font-weight: $font-bold-weight;
+            }
+
+            .whatitem {
+                list-style-type: disc;
+                list-style-position: outside;
+                margin-left: $normal;
+            }
+        }
+    }
+}
+
+@include MediaMedium {
+    .cv {
+        .cv-item {
+            flex-direction: row;
+            position: static;
+            padding-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            > ul {
+                padding-top: $normal;
+                padding-bottom: $normal;
+
+                &::before {
+                    content: none;
+                }
+            }
+
+            aside {
+
+                padding-top: $normal;
+                padding-bottom: $normal;
+                width: 25%;
+                padding-right: $large;
+                margin-right: $large;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    background-color: $border-color;
+                    left: auto;
+                    right: 0;
+                    width: 5px;
+                }
+
+                &::before {
+                    display: block;
+                    content: '';
+                    height: $normal - $xsmall;
+                    width: $normal - $xsmall;
+                    border: 4px solid $body-bg;
+                    background-color: $brand-primary;
+                    box-shadow: 0 0 0 $xsmall $border-color;
+                    border-radius: 100%;
+                    position: absolute;
+                    right: -$xsmall;
+                    top: $normal + $xsmall + $xsmall;
+                    z-index: 1;
+                }
+
+                .where {
+                    .agency {
+                        font-weight: $font-bold-weight;
+                    }
+
+                    .city {
+                        font-style: italic;
+                    }
+                }
+
+            }
+
+            &:first-of-type {
+                aside {
+                    &::after {
+                        top: $normal + $small + $xsmall;
+                    }
+                }
+            }
+
+            > ul {
+                width: calc((100% / 3) * 2);
+            }
+        }
+    }
+}

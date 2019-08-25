@@ -1,0 +1,47 @@
+html {
+    background-color: $body-bg;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: $body-bg;
+    padding-top: $xxlarge;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: calc(#{$HugeWidth} - #{$xxlarge});
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    position: relative;
+
+    > svg {
+        top: 5rem;
+        height: auto;
+        width: 16rem;
+        left: -8rem;
+        color: $brand-primary;
+        opacity: .25;
+        pointer-events: none;
+        position: fixed;
+    }
+}
+
+article {
+    background-color: $panel-bg;
+    padding: $normal;
+    margin: $normal;
+
+    @include MediaHuge {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}

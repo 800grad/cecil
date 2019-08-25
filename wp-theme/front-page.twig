@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% if post.meta('hero-header') or post.meta('hero-intro') %}
+        <article class="hero">
+            {% if post.meta('hero-header') %}
+                <header>
+                    {{ post.meta('hero-header') }}
+                </header>
+            {% endif %}
+            {% if post.meta('hero-intro') %}
+                {{ post.meta('hero-intro') }}
+            {% endif %}
+        </article>
+    {% endif %}
+
+    <div class="projekte">
+        <header>
+            <h2 class="projekte-headline">Letzte Projekte</h2>
+        </header>
+        <div class="projekte-inner">
+            {% for post in projects %}
+                <article class="projekt">
+                    {% if post.thumbnail_image %}<img class="projekt-img" src="{{ TimberImage(post.thumbnail_image).src }}" alt="{{ post.title }}">{% endif %}
+                    <h3 class="projekt-title">{{ post.title }}</h3>
+                    <p class="projekt-excerpt">{{ post.post_excerpt }}</p>
+                    <p class="projekt-link"><a href="{{ post.link }}" class="btn is--small">Learn More</a></p>
+                </article>
+            {% endfor %}
+        </div>
+        <footer>
+            <a class="btn is--primary" href="/projekte">Mehr Projekte</a>
+        </footer>
+    </div>
+
+    <div class="artikel">
+        <h2>Artikel</h2>
+        {% for post in guides %}
+            <article class="artikel">
+                {% if post.thumbnail_image %}<img class="artikel-img" src="{{ TimberImage(post.thumbnail_image).src }}" alt="{{ post.title }}">{% endif %}
+                <h3 class="artikel-title">{{ post.title }}</h3>
+                <p class="artikel-excerpt">{{ post.post_excerpt }}</p>
+                <p class="artikel-link"><a href="{{ post.link }}" class="btn">Learn More</a></p>
+            </article>
+        {% endfor %}
+    </div>
+
+    {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

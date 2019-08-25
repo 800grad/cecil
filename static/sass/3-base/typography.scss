@@ -1,0 +1,88 @@
+body {
+  font-family: $font-stack-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.headline {
+  font-family: $font-stack-head;
+}
+
+code {
+  font-family: $font-stack-mono;
+}
+
+h1 {
+  font-size: $xlarge;
+  font-weight: 700;
+  margin-bottom: $large;
+
+  em {
+    display: block;
+    margin-top: $normal;
+  }
+}
+
+h2 {
+  font-size: $large;
+  font-weight: 700;
+  margin-bottom: $normal;
+}
+
+h3 {
+  font-size: $normal;
+  font-weight: 700;
+  margin-bottom: $small;
+}
+
+h4 {
+  font-size: $normal;
+  font-weight: 400;
+  margin-bottom: $small;
+}
+
+h5 {
+  font-size: $small;
+  font-weight: 700;
+  margin-bottom: $xsmall;
+}
+
+h5 {
+  font-size: $small;
+  font-weight: 400;
+  margin-bottom: $xsmall;
+}
+
+ul,
+ol,
+dl {
+  margin-bottom: $normal;
+}
+
+html {
+  font-size: $ExtraSmallRoot;
+
+  @include MediaSmall {
+    font-size: $SmallRoot;
+  }
+
+  @include MediaMedium {
+    font-size: $MediumRoot;
+  }
+
+  @include MediaLarge {
+    font-size: $LargeRoot;
+  }
+
+  @include MediaExtraLarge {
+    font-size: $ExtraLargeRoot;
+  }
+
+  @include MediaHuge {
+    font-size: $HugeRoot;
+  }
+}

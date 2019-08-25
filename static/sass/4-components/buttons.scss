@@ -1,0 +1,64 @@
+.btn {
+    min-height: 1rem;
+    font-size: 1rem;
+    padding: .5rem;
+    background-color: transparent;
+    border: 1px solid;
+    color: $brand-primary;
+    text-decoration: none;
+    border-radius: $xsmall;
+
+        &:hover {
+            color: $text-color;
+        }
+
+    &.is--primary {
+        background-color: $brand-primary;
+        background-image: $brand-primary-gradient-ver;
+        color: $body-bg;
+        border-color: $brand-primary;
+
+        &:hover {
+            background-color: $brand-primary-dark;
+            background-image: none;
+            border-color: $brand-primary-dark;
+        }
+    }
+
+    &.is--secondary {
+        background-color: $brand-secondary;
+        background-image: $brand-secondary-gradient-ver;
+        color: $body-bg;
+        border-color: $brand-secondary;
+
+        &:hover {
+            background-color: $brand-secondary-dark;
+            border-color: $brand-secondary-dark;
+            background-image: none;
+        }
+    }
+
+    &.is--tiny {
+        font-size: .5rem;
+        min-height: .5rem;
+        padding: .25rem;
+    }
+
+    &.is--small {
+        font-size: .75rem;
+        min-height: .75rem;
+        padding: .5rem;
+    }
+
+    &.is--large {
+        font-size: 1.5rem;
+        min-height: 1.5rem;
+        padding: .75rem;
+    }
+
+    &.is--huge {
+        min-height: 2rem;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}

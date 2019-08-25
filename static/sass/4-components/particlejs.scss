@@ -1,0 +1,9 @@
+#particles-js {
+    position: absolute;
+    top: calc(-#{$normal} - #{$normal} - #{$normal} - #{$xlarge});
+    left: -$normal;
+    right: -$normal;
+    z-index: 0;
+    height: calc(100% + #{$normal} + #{$normal} + #{$normal} + #{$normal} + #{$xlarge});
+    width: calc(100% + #{$normal} + #{$normal});
+}

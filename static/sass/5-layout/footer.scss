@@ -1,0 +1,16 @@
+.footer {
+    position: sticky;
+    top: 100vh;
+    bottom: 0;
+    width: 100%;
+    font-size: $normal;
+    line-height: $normal;
+    height: $xlarge;
+    padding: $normal $large;
+    background-color: $panel-bg;
+    box-shadow: 0 0 $xsmall $overlay-bg;
+
+    p {
+        margin-bottom: 0;
+    }
+}

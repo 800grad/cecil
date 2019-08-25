@@ -1,0 +1,323 @@
+/*! normalize.scss v8.0.1.min | MIT License | github.com/benjaminwunn/normalize.scss */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+details,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+caption {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: inherit;
+    text-align: left;
+    caption-side: bottom;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $text-color;
+    text-align: left;
+    background-color: $body-bg;
+}
+
+[tabindex="-1"]:focus {
+    outline: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+a {
+    background-color: transparent;
+    color: $brand-primary;
+
+    &:not([href]):not([tabindex]) {
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $brand-primary-light;
+            text-decoration: none;
+
+            &:focus {
+                color: $brand-primary-light;
+                text-decoration: none;
+            }
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+abbr {
+    &[title],
+    &[data-original-title] {
+        text-decoration: underline;
+        text-decoration: underline dotted;
+        cursor: help;
+        border-bottom: 0;
+        text-decoration-skip-ink: none;
+    }
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    ol,
+    ul,
+    dl {
+        margin-bottom: 0;
+    }
+}
+
+dt {
+    font-weight: 600;
+}
+
+dd {
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+    word-wrap: normal;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+button,
+.button,
+.btn,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    appearance: none;
+    cursor: pointer;
+    border-radius: 0;
+
+    &::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+
+    &:-moz-focusring {
+        outline: 1px dotted;
+    }
+
+    &:focus {
+        outline: 1px solid;
+    }
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+th {
+    text-align: inherit;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        height: auto;
+    }
+}
+
+[type="search"] {
+    -webkit-appearance: none;
+    outline-offset: -2px;
+
+    &::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}

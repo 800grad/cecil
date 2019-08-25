@@ -1,0 +1,43 @@
+@mixin MediaExtraSmall {
+    @media screen and (min-width: #{$ExtraSmallWidth}) {
+        @content;
+    }
+}
+
+@mixin MediaSmall {
+    @media screen and (min-width: #{$SmallWidth}) {
+        @content;
+    }
+}
+
+@mixin MediaMedium {
+    @media screen and (min-width: #{$MediumWidth}) {
+        @content;
+    }
+}
+
+@mixin MediaLarge {
+    @media screen and (min-width: #{$LargeWidth}) {
+        @content;
+    }
+}
+
+@mixin MediaExtraLarge {
+    @media screen and (min-width: #{$ExtraLargeWidth}) {
+        @content;
+    }
+}
+
+@mixin MediaHuge {
+    @media screen and (min-width: #{$HugeWidth}) {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

@@ -1,0 +1,51 @@
+.projekte {
+    margin-bottom: $normal;
+    padding: 0 $normal;
+
+    @include MediaHuge {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .projekte-inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$small;
+    }
+
+    header,
+    footer {
+        padding: $normal;
+    }
+
+    header {
+        padding: $normal 0;
+    }
+
+    footer {
+        margin-top: $small;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        padding: 0 $normal;
+        border-radius: $xsmall;
+        box-shadow: 0 0 2rem -1rem $brand-primary,
+    }
+
+    .projekt {
+        padding: $normal;
+        margin: $small;
+
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: $ExtraSmallWidth;
+
+        border-radius: $small;
+        box-shadow: $base-box-shadow;
+    }
+}

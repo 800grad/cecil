@@ -1,0 +1,15 @@
+title: "Benjamin Lewandowski"
+baseline: "Your content driven static site generator."
+baseurl: http://benjaminlewandowski.io
+description: "Cecil is a CLI application that merges plain text files (written in Markdown), images and Twig templates to generate a static website."
+author:
+  name: Benjamin Lewandowski
+  url: http://benjaminlewandowski.io
+language: de
+languages:
+  en:
+    name: English
+    locale: en_US
+  de:
+    name: German
+    locale: de_DE

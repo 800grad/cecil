@@ -16,3 +16,5 @@ fields:
     options:
     - main
   label: Menu
+pages:
+- content/imprint.md

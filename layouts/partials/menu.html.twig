@@ -1,0 +1,7 @@
+{% if site.menus.main is defined %}
+<nav class="menu" aria-label="Navigation">
+{% for entry in site.menus.main|sortByWeight %}
+<a class="menu-item{% if url(page) == url(entry.url) %} selected{% endif %}" href="{{ url(entry.url) }}">{{ entry.name }}</a>
+{% endfor %}
+</nav>
+{% endif %}

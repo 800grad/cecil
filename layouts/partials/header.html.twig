@@ -1,0 +1,13 @@
+<header class="mainhead" id="mainhead">
+    <div class="content-wrapper">
+        <div class="mainhead-logo" role="banner">
+            <a class="mainhead-title" href="/" rel="home" title="home">{{site.title}}</a>
+            <div class="mainhead-slogan">{{site.baseline}}</div>
+        </div>
+        <nav id="nav-main" class="mainnavigation" role="navigation">
+            {% block nav %}
+                {% include 'partials/menu.html.twig' %}
+            {% endblock nav %}
+        </nav>
+    </div>
+</header>

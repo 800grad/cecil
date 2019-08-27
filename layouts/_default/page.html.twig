@@ -6,35 +6,25 @@
 <html lang="{{ site.language|default('en') }}">
   <head>
 {% block head %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.title }}</title>
-    <meta property="og:title" content="{{ site.title }}" />
-    <meta property="og:locale" content="{{ site.language.locale|default('en') }}" />
-    <meta name="description" content="{{ site.description }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-    <link rel="canonical" href="{{ url(page, {canonical:true}) }}" />
-    <meta property="og:url" content="{{ url(page, {canonical:true}) }}" />
-    <meta property="og:site_name" content="{{ site.title }}" />
-    <link rel="stylesheet" href="{{ url(toCSS('style.scss')) }}">
-{% include 'partials/alternates.html.twig' %}
+    {% include 'partials/html-header.html.twig' %}
 {% endblock head %}
   </head>
-  <body>
+  <body class="no-js" data-template="base.twig">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    {% block header %}
+        {% include 'partials/header.html.twig' %}
+    {% endblock %}
+    <main id="content" role="main" class="content-wrapper">
 
-{% block nav %}
-{% if site.menus.main is defined %}
-<nav class="menu" aria-label="Navigation">
-{% for entry in site.menus.main|sortByWeight %}
-<a class="menu-item{% if url(page) == url(entry.url) %} selected{% endif %}" href="{{ url(entry.url) }}">{{ entry.name }}</a>
-{% endfor %}
-</nav>
-{% endif %}
-{% endblock nav %}
-          <h1>{{ page.title }}</h1>
-{% block content %}
-          {{ page.content }}
-{% endblock content %}
+    {% block content %}
+        <article>
+            {% block title %}
+                <h1>{{ page.title }}</h1>
+            {% endblock title %}
+
+            {{ page.content }}
+        </article>
+    {% endblock content %}
+    </main>
   </body>
 </html>
